@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+
+<html>
+<head>
+    <title>Text Analyzer</title>
+</head>
+
+<body>
+{% block content%}
+<h2>Welcome to text Analyzer</h2>
+<form  action="remove_pun" method="post">{% csrf_token %}
+<textarea name="text" placeholder="Enter your text Here" style='margin: 0px;
+width: 1124px; height: 277px;'></textarea><br>
+    <input type="checkbox" name="puncation"> Remove Puncation<br>
+     <input type="checkbox" name="capital"> Capitalize All<br>
+    <input type="checkbox" name="line_remover">line remover<br>
+    <input type="checkbox" name="space_remover">space remover<br>
+
+
+    <button type="submit">Analyze</button>
+</form>
+
+{% endblock %}
+
+</body>
+
+</html>
